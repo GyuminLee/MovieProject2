@@ -1,0 +1,2 @@
+rootProject.name='UdacityMovieAppAAC'
+include ':app'
