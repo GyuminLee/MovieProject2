@@ -10,7 +10,7 @@
         android:layout_width="@dimen/play_icon_size"
         android:layout_height="@dimen/play_icon_size"
         android:layout_margin="@dimen/play_icon_margin"
-        android:src="@drawable/baseline_play_circle_outline_black_24"
+        app:srcCompat="@drawable/baseline_play_circle_outline_black_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

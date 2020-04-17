@@ -64,9 +64,11 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Movi
         mainViewModel.getMovieRepository().observe(this, new Observer<MovieResponse>() {
             @Override
             public void onChanged(MovieResponse movieResponse) {
-                ArrayList<Movie> movieList = movieResponse.getResults();
-                movieArrayList.addAll(movieList);
-                movieAdapter.notifyDataSetChanged();
+                if(movieResponse.getResults() != null) {
+                    ArrayList<Movie> movieList = movieResponse.getResults();
+                    movieArrayList.addAll(movieList);
+                    movieAdapter.notifyDataSetChanged();
+                }
             }
         });
     }
